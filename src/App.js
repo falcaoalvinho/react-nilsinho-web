@@ -1,8 +1,8 @@
+import { Header } from './assets/components/Header/Header.tsx';
+
 function App() {
   return (
-    <div>
-      <h1>BANANAS PALACE GOES CRAZY MY FELLA</h1>
-    </div>
+    <Header/>
   );
 }
 
