@@ -3,20 +3,20 @@ import * as Component from './LocalWeatherComponents';
 import SunIcon from '../../images/LocalWeatherCard/SunIcon.png';
 import SunGlassesNilsinho from '../../images/LocalWeatherCard/SunGlassesNilsinho.png';
 
-export function LocalWeatherCard () {
+export function LocalWeatherCard (props) {
     return (
         <Component.Container>
             <Component.SunIcon src={SunIcon}/>
             <Component.ContentContainer>
                 <Component.TextContainer>
-                    <Component.TemperatureText>30°c</Component.TemperatureText>
-                    <Component.StateText>Ensolarado</Component.StateText>
+                    <Component.TemperatureText>{props.TemperatureText}</Component.TemperatureText>
+                    <Component.StateText>{props.StateText}</Component.StateText>
                 </Component.TextContainer>
                 <Component.NilsinhoImage src={SunGlassesNilsinho}/>
             </Component.ContentContainer>
             <Component.LocalName>
                 <Component.Detail/>
-                <Component.LocalNameText>São Paulo</Component.LocalNameText>
+                <Component.LocalNameText>{props.LocalNameText}</Component.LocalNameText>
             </Component.LocalName>
         </Component.Container>
     )

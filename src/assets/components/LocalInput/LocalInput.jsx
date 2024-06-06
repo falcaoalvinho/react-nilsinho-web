@@ -27,6 +27,7 @@ export function LocalInput(props) {
                 }}
                 placeholder="Procurar Local"
                 onChange={props.onChange}
+                value={props.value}
             />
             <button 
                 style={{

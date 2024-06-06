@@ -31,6 +31,8 @@ export const SunIcon = styled.img`
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: row;
+    align-itens: center;
+    justify-content: space-betweem;
 `;
 
 export const TextContainer = styled.div`
@@ -59,26 +61,29 @@ export const TemperatureText = styled.h1`
 
 export const StateText = styled.h2`
     font-family: 'Montserrat';
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 800;
     margin-top: -65px;
     color: ${Colors.colorffffff};
 `;
 
 export const NilsinhoImage = styled.img`
-    height: 25vw;
-    margin-left: -150px;
-    margin-top: -50px;
+    margin-top: -8%;
+    margin-right: -10%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    height: 30vw;
 `;
 
 export const LocalName = styled.div`
-    margin-top: -20px;
+    margin-top: -3vh;
     display: flex;
     align-items: center;
     flex-direction: row;
     padding: 20px 30px;
     gap: 8px;
-    z-index: 2;
+    z-index: 999;
     background-color: ${Colors.color171717};
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
