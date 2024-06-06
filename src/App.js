@@ -9,16 +9,16 @@ import { useState } from 'react';
 import { LocalList } from './assets/components/LocalList/LocalList.jsx';
 
 const colorThemes = {Sun: [Colors.colorFFB039, Colors.colorFFF439]}
+var x = -1;
 
 function App() {
   var [Input, setInput] = useState('');
-  var [Locals, setLocal] = useState(['Brasilia']);
+  var [Locals, setLocal] = useState(['Brasília']);
   
   const inputValueHandler = event => {
     setInput(event.target.value)
   }
   
-
   const addCidade = () => {
     setLocal([...Locals, Input])
   }
@@ -30,10 +30,11 @@ function App() {
         <div style={{display: 'flex', flexDirection: 'column', gap: 30, marginTop: 70}}>
           <LocalInput onChange={inputValueHandler} onClick={addCidade}/>
           {Locals.map((itemPesquisado) =>{
-            let x = -1;
             x++;
             return(
-              <LocalListItem key={x} LocalName={itemPesquisado}/>
+              <LocalListItem key={x} LocalName={itemPesquisado}
+              //  deleteClick={deleteCidade}
+               />
             )
           })}
         </div>

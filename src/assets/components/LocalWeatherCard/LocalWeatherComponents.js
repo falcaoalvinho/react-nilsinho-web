@@ -7,6 +7,7 @@ export const Container = styled.div`
     flex-direction: column;
 
     width: 45vw;
+    height: fit-content;
     
     border-radius: 40px;
     border: 5px solid ${Colors.color4E4E4E};

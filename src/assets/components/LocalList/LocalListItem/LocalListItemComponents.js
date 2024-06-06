@@ -53,7 +53,7 @@ export const Text = styled.h4`
 
 export function RemoveButton(props) {
     return (
-        <button style={{backgroundColor:'rgba(0,0,0,0)', borderStyle: 'none'}} onClick={props.onClick}>
+        <button style={{backgroundColor:'rgba(0,0,0,0)', borderStyle: 'none'}} onClick={props.deleteClick}>
             <img src={props.ButtonImage} style={{height: 35, width: 35}}/>
         </button>
     )
