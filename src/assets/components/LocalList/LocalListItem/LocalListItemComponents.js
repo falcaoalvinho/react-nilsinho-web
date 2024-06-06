@@ -9,7 +9,7 @@ export const Container = styled.div`
     padding: 20px;
     gap: 10px;
 
-    width: 65%;
+    width: 92%;
 
     border-style: solid;
     border-width: 3px;
@@ -37,8 +37,8 @@ export const Container = styled.div`
 export function Detail(props){
     return(
         <div style={{display: 'flex',flexDirection: 'row'}}>
-            <div style={{height: 35, width: 8, alignSelf: 'center', backgroundColor: props.detailColor[0]}}/>
-            <div style={{height: 35, width: 8, alignSelf: 'center', backgroundColor: props.detailColor[1]}}/>
+            <div style={{height: 35, width: 8, alignSelf: 'center', backgroundColor: Colors.color212121}}/>
+            <div style={{height: 35, width: 8, alignSelf: 'center', backgroundColor: Colors.color4E4E4E}}/>
         </div>
     )
 }  

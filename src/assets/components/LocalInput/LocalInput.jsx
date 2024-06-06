@@ -1,17 +1,16 @@
 import React from "react";
 import { Colors } from "../../colors/colors";
 import SearchImage from '../../images/LocalInput/SearchIcon.png';
-import { useState } from "react";
 
-export function LocalInput() {
-    var [teste, setTest] = useState('');
-
+export function LocalInput(props) {
     return (
         <div style={{
             display: 'flex',
             flexDirection: 'row',
+            justifyContent: 'space-between',
             padding: 20,
             marginTop: 30,
+            // width: '40vw',
             borderRadius: 20,
             borderColor: Colors.color4E4E4E,
             borderWidth: 3,
@@ -27,19 +26,14 @@ export function LocalInput() {
                     borderStyle: 'none'
                 }}
                 placeholder="Procurar Local"
-                onChange={event => {
-                    setTest(event.target.value);
-                }}
-
+                onChange={props.onChange}
             />
             <button 
                 style={{
                     backgroundColor: 'rgba(0,0,0,0)',
                     borderStyle: 'none'
                 }}  
-                onClick={() => {
-                console.log(teste);
-            }}>
+                onClick={props.onClick}>
                 <img src={SearchImage} style={{height: 40, width: 40}} alt='Icone de Pesquisa'/>
             </button>
         </div>

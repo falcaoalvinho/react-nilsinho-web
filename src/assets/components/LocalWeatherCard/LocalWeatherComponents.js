@@ -6,10 +6,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
-    width: 650px;
+    width: 45vw;
     
     border-radius: 40px;
-    border-colapse: colapse;
     border: 5px solid ${Colors.color4E4E4E};
     background-color: ${Colors.color212121};
 `; 
@@ -29,12 +28,14 @@ export const SunIcon = styled.img`
 `;
 
 export const ContentContainer = styled.div`
-    margin-top: -30px;
     display: flex;
     flex-direction: row;
 `;
 
 export const TextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     margin-left: 30px;
     z-index: 2;
 `;
@@ -64,18 +65,15 @@ export const StateText = styled.h2`
 `;
 
 export const NilsinhoImage = styled.img`
-    height: 390px;
-    margin-top: -20px;
+    height: 25vw;
     margin-left: -150px;
+    margin-top: -50px;
 `;
 
 export const LocalName = styled.div`
-    border-colapse: colapse;
-    margin-top: -50px;
+    margin-top: -20px;
     display: flex;
-    align-itens: center;
-    justify-content: flex-start;
-    text-align:center;
+    align-items: center;
     flex-direction: row;
     padding: 20px 30px;
     gap: 8px;

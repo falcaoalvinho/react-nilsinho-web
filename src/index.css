@@ -5,7 +5,8 @@
 
 #root {
     padding: 0px;
-    width: 100vw;
+    /* width: fit-content;
+    height: fit-content; */
     height: 100vh;
     background-color: #171717;
 }

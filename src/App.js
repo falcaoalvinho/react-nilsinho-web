@@ -1,21 +1,45 @@
-import { Header } from './assets/components/Header/Header.tsx';
-import { LocalWeatherCard } from './assets/components/LocalWeatherCard/LocalWeatherCard.tsx';
-import { Main } from './assets/components/Main/Main.tsx';
+import { Header } from './assets/components/Header/Header.jsx';
+import { LocalWeatherCard } from './assets/components/LocalWeatherCard/LocalWeatherCard.jsx';
+// import { Main } from './assets/components/Main/Main.jsx';
 import { AppContainer } from './assets/components/AppContainer/AppContainer.js';
-import { LocalInput } from './assets/components/LocalInput/LocalInput.tsx';
-import { LocalListItem } from './assets/components/LocalList/LocalListItem/LocalListItem.tsx';
+import { LocalInput } from './assets/components/LocalInput/LocalInput.jsx';
+import { LocalListItem } from './assets/components/LocalList/LocalListItem/LocalListItem.jsx';
 import { Colors } from './assets/colors/colors.js';
 import { useState } from 'react';
+import { LocalList } from './assets/components/LocalList/LocalList.jsx';
+
+const colorThemes = {Sun: [Colors.colorFFB039, Colors.colorFFF439]}
 
 function App() {
-  var [Locals, setLocal] = useState([])
+  var [Input, setInput] = useState('');
+  var [Locals, setLocal] = useState(['Brasilia']);
+  
+  const inputValueHandler = event => {
+    setInput(event.target.value)
+  }
+  
+
+  const addCidade = () => {
+    setLocal([...Locals, Input])
+  }
 
   return (
     <AppContainer>
       <Header/>
-      <LocalInput/>
-      <LocalListItem LocalName='Rio de Janeiro' colors={[Colors.colorFFB039, Colors.colorFFF439]}/>
-    </AppContainer>
+      <div style={{display: 'flex', flexDirection: 'row', gap: 30, padding: 30, marginTop: -50}}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: 30, marginTop: 70}}>
+          <LocalInput onChange={inputValueHandler} onClick={addCidade}/>
+          {Locals.map((itemPesquisado) =>{
+            let x = -1;
+            x++;
+            return(
+              <LocalListItem key={x} LocalName={itemPesquisado}/>
+            )
+          })}
+        </div>
+        <LocalWeatherCard/>
+      </div>
+    </AppContainer> 
   );
 }
 
