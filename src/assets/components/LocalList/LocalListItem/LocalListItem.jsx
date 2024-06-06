@@ -9,7 +9,7 @@ export function LocalListItem(props) {
                 <Component.Detail detailColor={props.colors}/>
                 <Component.Text>{props.LocalName}</Component.Text>
             </div>
-            <Component.RemoveButton ButtonImage={ButtonBackground} deleteClick={props.deleteClick()}/>
+            <Component.RemoveButton ButtonImage={ButtonBackground} deleteClick={props.deleteClick}/>
         </Component.Container>
     )
 }

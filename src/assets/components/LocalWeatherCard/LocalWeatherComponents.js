@@ -36,7 +36,7 @@ export const ContentContainer = styled.div`
 export const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 75px;
     margin-left: 30px;
     z-index: 2;
 `;
